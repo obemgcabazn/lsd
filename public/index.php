@@ -24,7 +24,7 @@
             <img src="img/logo.png" alt="logo" class="logo">
           </div>
           <div class="col-md-3 col-xl-3">
-            <h1>Мы продаем<br>франшизу!</h1>
+            <h3>Мы продаем<br>франшизу!</h3>
           </div>
           <div class="col-md-4 col-xl-4">
             <div class="contacts">
@@ -56,7 +56,7 @@
             <form action="index.php" method="POST" name="header-form">
               <input type="text" class="form-control" name="name" placeholder="Имя">
               <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
-              <p class="input-desc">* Поля обязательные к заполнению</p>
+              <p class="require-desc">* Поля обязательные к заполнению</p>
               <button class="button-big">Отправить</button>
             </form>
           </div>
@@ -131,7 +131,7 @@
       <div class="row">
         <div class="offset-xl-1 col-xl-3">
           <h2>Хочу в бизнес!</h2>
-          <p class="input-desc">* Поля обязательные к заполнению</p>
+          <p class="require-desc">* Поля обязательные к заполнению</p>
         </div>
         <form action="index.php" method="POST" name="payment-form">
           <div class="col-xl-3">
@@ -217,7 +217,7 @@
             <div class="col-xl-3">
               <span class="icon video-crime"></span>
             </div>
-            <div class="col-xl-9 table">
+            <div class="col-xl-9">
               <p class="adv-desc mt20">
                 Видеоролики с места преступления
               </p>
@@ -352,7 +352,7 @@
       <div class="row">
         <div class="offset-xl-1 col-xl-3">
           <h2>Хочу в бизнес!</h2>
-          <p class="input-desc">* Поля обязательные к заполнению</p>
+          <p class="require-desc">* Поля обязательные к заполнению</p>
         </div>
         <form action="index.php" method="POST" name="payment-form">
           <div class="col-xl-3">
@@ -436,7 +436,7 @@
       <div class="row">
         <div class="offset-xl-1 col-xl-3">
           <h2>Какой город хочешь<br>оставить за собой?</h2>
-          <p class="input-desc">* Поля обязательные к заполнению</p>
+          <p class="require-desc">* Поля обязательные к заполнению</p>
         </div>
         <form action="index.php" method="POST" name="payment-form">
           <div class="col-xl-3">
@@ -446,7 +446,7 @@
             <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
           </div>
           <div class="col-xl-2">
-            <button>Отправить</button>
+            <button class="button-big">Отправить</button>
           </div>
         </form>
       </div>

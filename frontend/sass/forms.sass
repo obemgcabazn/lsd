@@ -11,8 +11,11 @@
   background: $yellow
   box-shadow: 0px 1px 3px $brown
 
+  padding: 8px 15px
+
   cursor: pointer
   border: none
+  border-radius: 15px
 
   &:hover 
     background: $yellow-hover
@@ -20,8 +23,9 @@
     color: $dark-brown
 
 
-  &:focus 
+  &:active
     box-shadow: inset 0px 3px 5px $brown
+    text-decoration: none
 
   &-big 
     @extend .button
