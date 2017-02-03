@@ -32,8 +32,8 @@
               <a href="" class="call-back">Заказать звонок</a>
               <div class="social">
                 <ul>
-                  <li><a href=""><img src="img/fb.png" alt="Facebook"></a></li>
-                  <li><a href=""><img src="img/vk.png" alt="Vkontakte"></a></li>
+                  <li><a href="https://vk.com/lsdgame" target="_blank"><img src="img/fb.png" alt="Facebook"></a></li>
+                  <li><a href="https://www.facebook.com/lsdisgame" target="_blank"><img src="img/vk.png" alt="Vkontakte"></a></li>
                 </ul>
               </div>
             </div>
@@ -42,14 +42,15 @@
       </div>
 
 
-      <div class="tv-wrap">
+      <div class="tv">
         <div class="row">
           <div class="offset-xl-1 col-xl-7">
-            <div class="tv">
+
               <img src="img/tv.png" alt="" class="tv-img">
               <p class="tv-desc text-xs-center text-uppercase">Вся суть бизнеса<br>за 2,5 минуты!</p>
-              <img src="img/play.png" alt="" class="play-img">
-            </div>
+              <img src="img/play.png" alt="" class="tv-play">
+              <img src="img/noise.gif" alt="" class="tv-noise">
+            
           </div>
           <div class="col-xl-3">
             <h2>Хочу в бизнес!</h2>
@@ -314,31 +315,31 @@
         <div class="offset-xs-1 col-xl-10">
           <ul class="stages">
             <li>
-              <img src="img/work.png" alt="">
+              <span class="stages-icon invite"></span>
               <p class="stages-desc">Знакомство</p>
             </li>
             <li>
-              <img src="img/work.png" alt="">
+              <span class="stages-icon meet"></span>
               <p class="stages-desc">Личная<br>встреча</p>
             </li>
             <li>
-              <img src="img/work.png" alt="">
+              <span class="stages-icon contract"></span>
               <p class="stages-desc">Подписание<br>договора</p>
             </li>
             <li>
-              <img src="img/work.png" alt="">
+              <span class="stages-icon payment"></span>
               <p class="stages-desc">Оплата<br>взноса</p>
             </li>
             <li>
-              <img src="img/work.png" alt="">
+              <span class="stages-icon execution"></span>
               <p class="stages-desc">Исполнение<br>обязательств</p>
             </li>
             <li>
-              <img src="img/work.png" alt="">
+              <span class="stages-icon education"></span>
               <p class="stages-desc">Подробное<br>обучение</p>
             </li>
             <li>
-              <img src="img/work.png" alt="">
+              <span class="stages-icon support"></span>
               <p class="stages-desc">Поддержка</p>
             </li>
           </ul>
@@ -497,8 +498,8 @@
             <a href="" class="call-back">Заказать звонок</a>
             <div class="social">
               <ul>
-                <li><a href=""><img src="img/fb.png" alt="Facebook"></a></li>
-                <li><a href=""><img src="img/vk.png" alt="Vkontakte"></a></li>
+                <li><a href="https://vk.com/lsdgame" target="_blank"><img src="img/fb.png" alt="Facebook"></a></li>
+                <li><a href="https://www.facebook.com/lsdisgame" target="_blank"><img src="img/vk.png" alt="Vkontakte"></a></li>
               </ul>
             </div>
           </div>

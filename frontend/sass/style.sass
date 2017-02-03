@@ -23,7 +23,7 @@ section
 
 .form-section
     background: linear-gradient(to bottom, #aa3700, #bc4800)
-    padding: 20px 0 5px
+    padding: 23px 0 0px
 
     &.second
         background: linear-gradient(to bottom, #c0bcb2, #dcdad5)
@@ -47,6 +47,8 @@ section
 
     h2
         color: white
+        margin-top: 7px
+        margin-bottom: 0
 
     .require-desc
         color: white
@@ -82,6 +84,9 @@ section
             color: white
             letter-spacing: 1px
 
+            &:hover
+                text-decoration: none
+
         .call-back
             color: $light-brown
             font-size: 14px
@@ -102,14 +107,14 @@ section
                 li
                     display: inline-block
 
-    .tv-wrap
+    .tv
         margin-top: 25px
 
-        .tv-img
+        &-img
             position: absolute
             z-index: 50
 
-        .tv-desc
+        &-desc
             position: absolute
             z-index: 10
             top: 250px
@@ -117,11 +122,17 @@ section
             font-weight: 600
             font-size: 24px
 
-        .play-img
+        &-play
             position: absolute
             z-index: 5
             top: 105px
             left: 200px
+
+        &-noise
+            position: absolute
+            z-index: 2
+            top: 40px
+            left: 50px
 
         input 
             border-radius: 0
@@ -135,13 +146,14 @@ section
             color: white
 
 #results 
-    margin-top: 123px
-    margin-bottom: 25px
+    margin-top: 125px
+    margin-bottom: 35px
     text-align: center
 
     h2 
         font-size: 45px
         color: $dark-brown
+        margin-bottom: 0
 
     .result-item 
         .number 
@@ -164,8 +176,8 @@ section
 #calculator 
     background: linear-gradient(to bottom, $orange, #e56b1f)
     color: white
-    padding-top: 35px
-    padding-bottom: 20px
+    padding-top: 30px
+    padding-bottom: 24px
 
     h2 
         color: white
@@ -236,11 +248,14 @@ section
         &-currency 
             font-size: 24px
             font-weight: 300
+            display: inline-block
+            margin-left: 7px
 
     #payment-val 
         font-size: 55px
         font-weight: 600
-        margin-top: 0
+        margin-top: -10px
+        display: inline-block
 
 #cooperation 
     background: 
@@ -248,7 +263,7 @@ section
         image: url(img/print.png)
         repeat: no-repeat
         position: calc(70% + 300px) 100%
-    padding-top: 24px
+    padding-top: 30px
     padding-bottom: 80px
 
     h2, h3
@@ -274,28 +289,30 @@ section
         margin-bottom: 20px
 
     span.icon 
-        &:before 
+        &::before 
             content: ""
             display: block
-            background: url(img/icons.jpg) no-repeat
+            background: url(img/icon_sprite.png) no-repeat
             width: 73px
             height: 73px
             border-radius: 50%
 
-        &.video:before 
-            background-position: 0 -75px
-        &.audio:before 
-            background-position: 0 -160px
-        &.docs:before 
-            background-position: 0 -237px
-        &.box:before 
-            background-position: 0 -310px
-        &.video-crime:before
-            background-position: 0 -370px
-        &.audio-crime:before 
-            background-position: 0 -462px
-        &.support:before 
-            background-position: 0 -537px
+        &.scenario::before
+            background-position: -15px -145px
+        &.video::before 
+            background-position: -155px -137px
+        &.audio::before 
+            background-position: -298px -130px
+        &.docs::before 
+            background-position: -440px -135px
+        &.box::before 
+            background-position: -584px -140px
+        &.video-crime::before
+            background-position: -731px -134px
+        &.audio-crime::before 
+            background-position: -865px -140px
+        &.support::before 
+            background-position: -1024px -140px
 
     .adv-desc 
         color: white
@@ -338,9 +355,6 @@ section
         margin: 0
         padding: 0
 
-        img 
-            display: block
-
         li 
             list-style: none
             display: inline-block
@@ -353,7 +367,30 @@ section
             font-size: 14px
             text-align: center
             height: 42px
-            margin-top: 15px
+            margin-top: 8px
+
+        &-icon
+            &:before
+                content: ''
+                width: 110px
+                height: 72px
+                display: inline-block
+                background-image: url(img/icon_sprite.png)
+
+            &.invite:before
+                background-position: 0 0
+            &.meet:before
+                background-position: -140px 0
+            &.contract:before
+                background-position: -280px 0
+            &.payment:before
+                background-position: -420px 0
+            &.execution:before
+                background-position: -570px 0
+            &.education:before
+                background-position: -710px 0
+            &.support:before
+                background-position: -850px 0
 
 #proofs 
     padding-top: 30px
@@ -417,6 +454,7 @@ h2.city
 
 #gallery 
     text-align: center
+    padding-top: 0
 
     .tab-wrap 
         width: 275px
@@ -455,12 +493,12 @@ h2.city
                             border: none
 
     .tab-content-wrap 
-        height: 325px
-
+        height: 394px
         img 
             padding: 0
             margin: 0
             display: inline-block
+            width: 25%
 
 footer 
     background: black
