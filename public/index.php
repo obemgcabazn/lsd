@@ -46,19 +46,22 @@
         <div class="row">
           <div class="offset-xl-1 col-xl-7">
 
+              <a href="" class="tv-link">
+                <img src="img/play.png" alt="" class="tv-play">
+                <p class="tv-desc text-xs-center text-uppercase">Вся суть бизнеса<br>за 2,5 минуты!</p>
+              </a>
               <img src="img/tv.png" alt="" class="tv-img">
-              <p class="tv-desc text-xs-center text-uppercase">Вся суть бизнеса<br>за 2,5 минуты!</p>
-              <img src="img/play.png" alt="" class="tv-play">
               <img src="img/noise.gif" alt="" class="tv-noise">
             
           </div>
           <div class="col-xl-3">
             <h2>Хочу в бизнес!</h2>
-            <form action="index.php" method="POST" name="header-form">
+            <form action="mail.php" method="POST" name="header-form" class="call-back">
               <input type="text" class="form-control" name="name" placeholder="Имя">
               <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
               <p class="require-desc">* Поля обязательные к заполнению</p>
-              <button class="button-big">Отправить</button>
+              <span class="results"></span>
+              <button class="button-big" type="submit">Отправить</button>
             </form>
           </div>
         </div>
@@ -134,7 +137,7 @@
           <h2>Хочу в бизнес!</h2>
           <p class="require-desc">* Поля обязательные к заполнению</p>
         </div>
-        <form action="index.php" method="POST" name="payment-form">
+        <form action="index.php" method="POST" name="payment-form" class="call-back">
           <div class="col-xl-3">
             <input type="text" class="form-control" name="name" placeholder="Имя">
           </div>
@@ -142,7 +145,7 @@
             <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
           </div>
           <div class="col-xl-2">
-            <button class="button-big">Отправить</button>
+            <button class="button-big" type="submit">Отправить</button>
           </div>
         </form>
       </div>
@@ -275,36 +278,19 @@
 
     <div class="container">
       <div class="row">
-        <div class="offset-xl-1 col-xl-2">
+        <div class="offset-xl-4 col-xl-2">
           <div class="team-item">
-            <img src="" alt="" class="avatar">
-            <p class="avatar-desc">Яков Хворостин,<br>г. Орел</p>
+            <img src="img/team/belousov.jpg" alt="Денис Белоусов" class="team-item-avatar">
+            <p class="team-item-name">Денис Белоусов</p>
+            <p class="team-item-desc">создатель проекта ЛСД,<br>руководитель</p>
           </div>
         </div>
         <div class="col-xl-2">
           <div class="team-item">
-            <img src="" alt="" class="avatar">
-            <p class="avatar-desc">Александр Коган,<br>г. Калуга</p>
+            <img src="img/team/ahmetshin.jpg" alt="Антон Ахметшин" class="team-item-avatar">
+            <p class="team-item-name">Антон Ахметшин</p>
+            <p class="team-item-desc">совладелец проекта ЛСД,<br>игротехник</p>
           </div>
-        </div>
-        <div class="col-xl-2">
-          <div class="team-item">
-            <img src="" alt="" class="avatar">
-            <p class="avatar-desc">Лёха Медь,<br>г. Тюмень</p>
-          </div>
-        </div>
-        <div class="col-xl-2">
-          <div class="team-item">
-            <img src="" alt="" class="avatar">
-            <p class="avatar-desc">Дмитрий Яров,<br>г. Ижевск</p>
-          </div>
-        </div>
-        <div class="col-xl-2">
-          <div class="team-item">
-            <img src="" alt="" class="avatar">
-            <p class="avatar-desc">Дмитрий Яров,<br>г. Ижевск</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -355,7 +341,7 @@
           <h2>Хочу в бизнес!</h2>
           <p class="require-desc">* Поля обязательные к заполнению</p>
         </div>
-        <form action="index.php" method="POST" name="payment-form">
+        <form action="index.php" method="POST" name="payment-form" class="call-back">
           <div class="col-xl-3">
             <input type="text" class="form-control" name="name" placeholder="Имя">
           </div>
@@ -363,7 +349,7 @@
             <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
           </div>
           <div class="col-xl-2">
-            <button class="button-big">Отправить</button>
+            <button class="button-big" type="submit">Отправить</button>
           </div>
         </form>
       </div>
@@ -439,7 +425,7 @@
           <h2>Какой город хочешь<br>оставить за собой?</h2>
           <p class="require-desc">* Поля обязательные к заполнению</p>
         </div>
-        <form action="index.php" method="POST" name="payment-form">
+        <form action="index.php" method="POST" name="payment-form" class="call-back">
           <div class="col-xl-3">
             <input type="text" class="form-control" name="name" placeholder="Город*">
           </div>
@@ -447,7 +433,7 @@
             <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
           </div>
           <div class="col-xl-2">
-            <button class="button-big">Отправить</button>
+            <button class="button-big" type="submit">Отправить</button>
           </div>
         </form>
       </div>

@@ -22,11 +22,11 @@ section
     padding-top: 42px
 
 .form-section
-    background: linear-gradient(to bottom, #aa3700, #bc4800)
+    background: url("img/pattern.png"), linear-gradient(to bottom, #aa3700, #bc4800)
     padding: 23px 0 0px
 
     &.second
-        background: linear-gradient(to bottom, #c0bcb2, #dcdad5)
+        background: url("img/pattern.png"), linear-gradient(to bottom, #c0bcb2, #dcdad5)
         
         .require-desc
             color: #423e38
@@ -110,9 +110,15 @@ section
     .tv
         margin-top: 25px
 
+        &-noise
+            position: absolute
+            z-index: 2
+            top: 40px
+            left: 50px
+        
         &-img
             position: absolute
-            z-index: 50
+            z-index: 5
 
         &-desc
             position: absolute
@@ -121,18 +127,17 @@ section
             left: 160px
             font-weight: 600
             font-size: 24px
+            color: $dark-brown
+
+            &:hover
+                color: $dark-brown
 
         &-play
             position: absolute
-            z-index: 5
+            z-index: 15
             top: 105px
             left: 200px
 
-        &-noise
-            position: absolute
-            z-index: 2
-            top: 40px
-            left: 50px
 
         input 
             border-radius: 0
@@ -174,7 +179,7 @@ section
             margin-top: 10px
 
 #calculator 
-    background: linear-gradient(to bottom, $orange, #e56b1f)
+    background: url("img/pattern.png"), linear-gradient(to bottom, $orange, #e56b1f)
     color: white
     padding-top: 30px
     padding-bottom: 24px
@@ -326,6 +331,7 @@ section
 #team 
     padding-top: 30px
     padding-bottom: 40px
+    background:  url("img/pattern.png") #eae8e1
 
     h2 
         font-size: 48px
@@ -334,7 +340,7 @@ section
         margin-bottom: 40px
 
     h3 
-        margin-top: 55px
+        margin-top: 20px
         margin-bottom: 60px
         font-weight: bold
         font-size: 34px
@@ -342,14 +348,17 @@ section
     .team-item 
         text-align: center
 
-    .avatar 
-        background-color: grey
-        width: 140px
-        height: 140px
-        border-radius: 50%
+        &-avatar 
+            background-color: grey
+            width: 140px
+            height: 140px
+            border-radius: 50%
+            margin-bottom: 7px
 
         &-desc 
             text-align: center
+            font-size: 12px
+            font-style: italic
 
     .stages 
         margin: 0
@@ -372,7 +381,7 @@ section
         &-icon
             &:before
                 content: ''
-                width: 110px
+                width: 106px
                 height: 72px
                 display: inline-block
                 background-image: url(img/icon_sprite.png)
@@ -493,7 +502,8 @@ h2.city
                             border: none
 
     .tab-content-wrap 
-        height: 394px
+        height: 100%
+        min-height: 325px
         img 
             padding: 0
             margin: 0
