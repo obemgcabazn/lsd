@@ -31,6 +31,9 @@ section
         .require-desc
             color: #423e38
 
+        .success
+            color: black
+
     &.third
         background: none
         margin-bottom: 20px
@@ -45,6 +48,9 @@ section
             color: #423e38
             margin-top: 0
 
+        .success
+            color: black
+
     h2
         color: white
         margin-top: 7px
@@ -55,6 +61,11 @@ section
 
     .form-control 
         margin-top: 8px
+
+    .success
+        padding-top: 5px
+        padding-left: 50px
+        color: white
 
 #first-screen 
     background: linear-gradient(to top, #a88966, #321f16)
@@ -87,6 +98,16 @@ section
             &:hover
                 text-decoration: none
 
+        .social
+            ul
+                list-style: none
+                margin: 0
+                margin-top: 15px
+                padding: 0
+
+                li
+                    display: inline-block
+
         .call-back
             color: $light-brown
             font-size: 14px
@@ -97,15 +118,9 @@ section
             &:hover
                 text-decoration: none
 
-        .social
-            ul
-                list-style: none
-                margin: 0
-                margin-top: 15px
-                padding: 0
-
-                li
-                    display: inline-block
+    .success
+        color: white
+        height: 301px
 
     .tv
         margin-top: 25px
@@ -190,7 +205,6 @@ section
 
     .bdr 
         border-right: 1px solid $light-yellow
-        margin-right: 20px
 
     .strength-desc
         margin-top: 35px
@@ -203,34 +217,17 @@ section
         margin: 0
         font-size: 16px
 
-    #strength-input 
+    .range-wrap
         margin-bottom: 35px
-        -webkit-appearance: none
-        border-radius: 0
-        width: 91%
-        height: 7px
-        border: 1px solid #bdc3c7
-        background-color: #fff
+        margin-left: -5px
+        width: 92%
 
-        &::-webkit-slider-thumb
-            -webkit-appearance: none
-            border-radius: 0
-            background-color: rgba(0,0,0,0)
-            width: 0
-            height: 0
-            border-left: 10px solid transparent
-            border-right: 10px solid transparent
-            border-bottom: 20px solid black
+
+        .irs-single
+            display: none
+
+        .irs-slider.single
             cursor: pointer
-
-            &::before
-                content: ''
-                width: 10px
-                height: 10px
-                background:red
-                position: relative
-                top: 10px
-                left: 10px
 
     .profit-desc 
         margin: 0
@@ -346,7 +343,9 @@ section
         font-size: 34px
 
     .team-item 
-        text-align: center
+
+        &-desc
+            margin-top: 30px
 
         &-avatar 
             background-color: grey
@@ -355,8 +354,8 @@ section
             border-radius: 50%
             margin-bottom: 7px
 
-        &-desc 
-            text-align: center
+        &-post 
+            text-align: left
             font-size: 12px
             font-style: italic
 
@@ -502,13 +501,14 @@ h2.city
                             border: none
 
     .tab-content-wrap 
-        height: 100%
-        min-height: 325px
+
         img 
             padding: 0
             margin: 0
-            display: inline-block
-            width: 25%
+            height: 320px
+
+    #video 
+        height: 320px
 
 footer 
     background: black
@@ -545,3 +545,22 @@ footer
 
             li
                 display: inline-block
+
+.call-back-modal
+    
+    .call-back
+        padding: 30px 20px
+
+        input + input
+            margin: 30px 0
+
+    .success
+        padding: 30px 0
+
+@media (min-width: 576px) 
+    .modal-dialog
+        margin-top: 100px
+
+.success 
+    font-size: 15px
+    display: none

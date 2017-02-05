@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>LSD</title>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="ion.rangeSlider.css">
+  <link rel="stylesheet" type="text/css" href="ion.rangeSlider.skinFlat.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <header>
     <ul id="menu-top" class="nav">
-      <li class="nav-item"><a href="#top" class="nav-link">Главная</a></li>
+      <li class="nav-item"><a href="#menu-top" class="nav-link">Главная</a></li>
       <li class="nav-item"><a href="#results" class="nav-link">Результаты</a></li>
       <li class="nav-item"><a href="#cooperation" class="nav-link">Сотрудничество</a></li>
       <li class="nav-item"><a href="#proofs" class="nav-link">Отзывы</a></li>
@@ -29,7 +32,7 @@
           <div class="col-md-4 col-xl-4">
             <div class="contacts">
               <a href="tel:+79090606897" class="phone">+7 (909) 060-68-97</a><br>
-              <a href="" class="call-back">Заказать звонок</a>
+              <a href="" class="call-back" data-toggle="modal" data-target=".call-back-modal">Заказать звонок</a>
               <div class="social">
                 <ul>
                   <li><a href="https://vk.com/lsdgame" target="_blank"><img src="img/fb.png" alt="Facebook"></a></li>
@@ -63,6 +66,11 @@
               <span class="results"></span>
               <button class="button-big" type="submit">Отправить</button>
             </form>
+            <div class="success">
+              Спасибо, мы получили ваши <br>
+              данные, наш менеджер свяжется <br>
+              с вами в ближайшее время!
+            </div>
           </div>
         </div>
       </div>
@@ -99,7 +107,6 @@
       <div class="row">
         <div class="offset-xl-1 col-xl-7 bdr">
           <p class="strength-desc text-uppercase">Численность населения вашего города, чел</p>
-          <div class="range-wrap">
             <div class="row">
               <div class="col-xl-3">
                 <p class="strength-val">до 500 000</p>
@@ -114,17 +121,19 @@
                 <span>|&nbsp;</span>
               </div>
             </div>
-            <input type="range" min="0" max="2" step="1" value="0" id="strength-input">
+            
+          <div class="range-wrap">
+            <input type="text" id="range" name="range">
           </div>
           <p class="payment-desc text-uppercase">Паушальный взнос</p>
           <div class="payment">
-            <span id="payment-val">200 000</span> <span class="payment-currency">руб</span>
+            <span id="payment-val">180 000</span> <span class="payment-currency">руб</span>
           </div>
         </div>
-        <div class="col-xl-3">
+        <div class="col-xl-4">
           <p class="profit-desc text-uppercase">За 1 год вы легко окупите паушальный взнос и заработаете</p>
           <div class="profit">
-            <span id="profit-val">958 580</span> <span class="currency">руб</span>
+            <span id="profit-val">725 660</span> <span class="currency">руб</span>
           </div>
         </div>
       </div>
@@ -137,17 +146,27 @@
           <h2>Хочу в бизнес!</h2>
           <p class="require-desc">* Поля обязательные к заполнению</p>
         </div>
-        <form action="index.php" method="POST" name="payment-form" class="call-back">
-          <div class="col-xl-3">
-            <input type="text" class="form-control" name="name" placeholder="Имя">
+        <div class="col-xl-8">
+          <div class="row">
+            <form action="mail.php" method="POST" name="payment-form" class="call-back">
+              <div class="col-xl-4">
+                <input type="text" class="form-control" name="name" placeholder="Имя">
+              </div>
+              <div class="col-xl-4">
+                <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
+              </div>
+              <div class="col-xl-3">
+                <button class="button-big" type="submit">Отправить</button>
+              </div>
+            </form>
           </div>
-          <div class="col-xl-3">
-            <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
+
+          <div class="success">
+            Спасибо, мы получили ваши данные,<br>
+            наш менеджер свяжется с вами в ближайшее время!
           </div>
-          <div class="col-xl-2">
-            <button class="button-big" type="submit">Отправить</button>
-          </div>
-        </form>
+        </div>
+
       </div>
     </dv>
   </section>
@@ -278,20 +297,36 @@
 
     <div class="container">
       <div class="row">
-        <div class="offset-xl-4 col-xl-2">
+        <div class="offset-md-1 col-md-5">
           <div class="team-item">
-            <img src="img/team/belousov.jpg" alt="Денис Белоусов" class="team-item-avatar">
-            <p class="team-item-name">Денис Белоусов</p>
-            <p class="team-item-desc">создатель проекта ЛСД,<br>руководитель</p>
+            <div class="row">
+              <div class="offset-md-1 col-md-4">
+                <img src="img/team/belousov.png" alt="Денис Белоусов" class="team-item-avatar">
+              </div>
+              <div class="col-md-7">
+                <div class="team-item-desc">
+                  <p class="team-item-name">Денис Белоусов</p>
+                  <p class="team-item-post">создатель проекта ЛСД,<br>руководитель</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-xl-2">
+        <div class="col-xl-5">
           <div class="team-item">
-            <img src="img/team/ahmetshin.jpg" alt="Антон Ахметшин" class="team-item-avatar">
-            <p class="team-item-name">Антон Ахметшин</p>
-            <p class="team-item-desc">совладелец проекта ЛСД,<br>игротехник</p>
+            <div class="row">
+              <div class="col-md-4">
+                <img src="img/team/ahmetshin.png" alt="Антон Ахметшин" class="team-item-avatar">
+              </div>
+              <div class="col-md-8">
+                <div class="team-item-desc">
+                  <p class="team-item-name">Антон Ахметшин</p>
+                  <p class="team-item-post">совладелец проекта ЛСД,<br>игротехник</p>
+                </div>
+              </div>
+            </div>
           </div>
-      </div>
+        </div>
     </div>
 
     <h3 class="text-xs-center">Порядок работы</h3>
@@ -341,17 +376,23 @@
           <h2>Хочу в бизнес!</h2>
           <p class="require-desc">* Поля обязательные к заполнению</p>
         </div>
-        <form action="index.php" method="POST" name="payment-form" class="call-back">
-          <div class="col-xl-3">
-            <input type="text" class="form-control" name="name" placeholder="Имя">
+        <div class="col-xl-8">
+          <form action="mail.php" method="POST" name="payment-form" class="call-back">
+            <div class="col-xl-4">
+              <input type="text" class="form-control" name="name" placeholder="Имя">
+            </div>
+            <div class="col-xl-4">
+              <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
+            </div>
+            <div class="col-xl-3">
+              <button class="button-big" type="submit">Отправить</button>
+            </div>
+          </form>
+          <div class="success">
+            Спасибо, мы получили ваши данные,<br>
+            наш менеджер свяжется с вами в ближайшее время!
           </div>
-          <div class="col-xl-3">
-            <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
-          </div>
-          <div class="col-xl-2">
-            <button class="button-big" type="submit">Отправить</button>
-          </div>
-        </form>
+        </div>
       </div>
     </dv>
   </section>
@@ -425,17 +466,23 @@
           <h2>Какой город хочешь<br>оставить за собой?</h2>
           <p class="require-desc">* Поля обязательные к заполнению</p>
         </div>
-        <form action="index.php" method="POST" name="payment-form" class="call-back">
-          <div class="col-xl-3">
-            <input type="text" class="form-control" name="name" placeholder="Город*">
+        <div class="col-xl-8">
+          <form action="mail.php" method="POST" name="payment-form" class="call-back">
+            <div class="col-xl-4">
+              <input type="text" class="form-control" name="name" placeholder="Город*">
+            </div>
+            <div class="col-xl-4">
+              <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
+            </div>
+            <div class="col-xl-3">
+              <button class="button-big" type="submit">Отправить</button>
+            </div>
+          </form>
+          <div class="success">
+            Спасибо, мы получили ваши данные,<br>
+            наш менеджер свяжется с вами в ближайшее время!
           </div>
-          <div class="col-xl-3">
-            <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
-          </div>
-          <div class="col-xl-2">
-            <button class="button-big" type="submit">Отправить</button>
-          </div>
-        </form>
+        </div>
       </div>
     </dv>
   </section>
@@ -456,10 +503,41 @@
       <!-- Tab panes -->
       <div class="tab-content">
         <div class="tab-pane active" id="photo" role="tabpanel">
-          <img src="img/photo-01.jpg" alt=""><img src="img/photo-02.jpg" alt=""><img src="img/photo-03.jpg" alt=""><img src="img/photo-04.jpg" alt="">
+          <div class="gallery-photo">
+            <div><img data-lazy="img/photo/photo-1.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-2.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-3.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-4.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-5.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-6.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-7.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-8.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-9.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-10.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-11.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-12.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-13.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-14.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-15.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-16.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-17.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-18.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-19.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-20.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-21.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-22.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-23.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-24.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-25.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-26.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-27.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-28.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-29.jpg" alt=""></div>
+            <div><img data-lazy="img/photo/photo-30.jpg" alt=""></div>
+          </div>
         </div>
         <div class="tab-pane" id="video" role="tabpanel">
-          Video-content
+          <a href="" data-toggle="modal" data-target=".video-modal-1"><img src="img/video/screenshot_video-1.jpg" alt=""></a><a href="" data-toggle="modal" data-target=".video-modal-2"><img src="img/video/screenshot_video-2.jpg" alt=""></a><a href="" data-toggle="modal" data-target=".video-modal-3"><img src="img/video/screenshot_video-3.jpg" alt=""></a><a href="" data-toggle="modal" data-target=".video-modal-4"><img src="img/video/screenshot_video-4.jpg" alt=""></a>
         </div>
       </div>
     </div>
@@ -472,7 +550,7 @@
         </div>
         <div class="col-xl-5">
           <ul id="menu-bottom" class="nav">
-            <li class="nav-item"><a href="#top" class="nav-link">Главная</a></li>
+            <li class="nav-item"><a href="#menu-top" class="nav-link">Главная</a></li>
             <li class="nav-item"><a href="#results" class="nav-link">Результаты</a></li>
             <li class="nav-item"><a href="#cooperation" class="nav-link">Сотрудничество</a></li>
             <li class="nav-item"><a href="#proofs" class="nav-link">Отзывы</a></li>
@@ -481,7 +559,7 @@
         <div class="col-xl-4">
           <div class="contacts">
             <a href="tel:+79090606897" class="phone">+7 (909) 060-68-97</a><br>
-            <a href="" class="call-back">Заказать звонок</a>
+            <a href="" class="call-back" data-toggle="modal" data-target=".call-back-modal">Заказать звонок</a>
             <div class="social">
               <ul>
                 <li><a href="https://vk.com/lsdgame" target="_blank"><img src="img/fb.png" alt="Facebook"></a></li>
@@ -494,9 +572,72 @@
     </div>
   </footer>
 
+  <!-- Модальное окно для формы заказа звонка -->
+  <div class="modal fade call-back-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col-xl-12">
+            <form action="mail.php" method="POST" name="call-back" class="call-back">
+              <input class="form-control" type="text" placeholder="Введите имя" name="name">
+              <input class="form-control" type="tel" placeholder="Номер телефона" name="phone">
+              <button type="submit" class="button-big">Отправить</button>
+            </form>
+            <div class="success">
+              Спасибо, мы получили ваши <br>
+              данные, наш менеджер свяжется <br>
+              с вами в ближайшее время!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Модальные окна для видео -->
+  <div class="modal fade video-modal-1" tabindex="-1" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-" role="document">
+      <div class="row">
+        <div class="col-xl-12">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/XFUo8anTK3A" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade video-modal-2" tabindex="-1" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-" role="document">
+      <div class="row">
+        <div class="col-xl-12">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/rEh-dQm19Zk" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade video-modal-3" tabindex="-1" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-" role="document">
+      <div class="row">
+        <div class="col-xl-12">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/w3RtCEqzVsA" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade video-modal-4" tabindex="-1" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-" role="document">
+      <div class="row">
+        <div class="col-xl-12">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/mT8KBL5qvx8" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://yastatic.net/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/jquery.maskedinput.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script src="js/ion.rangeSlider.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
