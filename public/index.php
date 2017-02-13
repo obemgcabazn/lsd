@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <title>LSD</title>
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="ion.rangeSlider.css">
-  <link rel="stylesheet" type="text/css" href="ion.rangeSlider.skinFlat.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta property="og:image" content="http://lsdgame.ru/img/vk-snippet.jpg">
+  <meta name="twitter:card" content="http://lsdgame.ru/img/vk-snippet.jpg">
+  <meta name="twitter:image:src" content="http://lsdgame.ru/img/vk-snippet.jpg">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" type="image/png" href="/img/plainicon.png">
+  <link rel="image_src" href='http://lsdgame.ru/img/vk-snippet.jpg' />
 </head>
-<body>
-  <header>
+<body id="body">
+  <div data-image='http://lsdgame.ru/img/vk-snippet.jpg'></div>
+  <header class="hidden-xs-down">
     <ul id="menu-top" class="nav">
       <li class="nav-item"><a href="#menu-top" class="nav-link">Главная</a></li>
       <li class="nav-item"><a href="#results" class="nav-link">Результаты</a></li>
@@ -21,22 +27,22 @@
   <section id="first-screen">
 
     <div class="container">
-      <div class="head-wrap">
+      <div class="head-wrap text-xs-center">
         <div class="row">
           <div class="offset-md-1 col-md-4 col-xl-4">
-            <img src="img/logo.png" alt="logo" class="logo">
+            <img src="img/logo.png" alt="logo" class="logo" width="100%">
           </div>
           <div class="col-md-3 col-xl-3">
             <h3>Мы продаем<br>франшизу!</h3>
           </div>
-          <div class="col-md-4 col-xl-4">
-            <div class="contacts">
-              <a href="tel:+79090606897" class="phone">+7 (909) 060-68-97</a><br>
+          <div class="col-md-4 col-xl-3">
+            <div class="contacts text-xl-right">
+              <a href="tel:88007005162" class="phone">8-800-700-51-62</a><br>
               <a href="" class="call-back" data-toggle="modal" data-target=".call-back-modal">Заказать звонок</a>
               <div class="social">
                 <ul>
-                  <li><a href="https://vk.com/lsdgame" target="_blank"><img src="img/fb.png" alt="Facebook"></a></li>
-                  <li><a href="https://www.facebook.com/lsdisgame" target="_blank"><img src="img/vk.png" alt="Vkontakte"></a></li>
+                  <li><a href="https://www.facebook.com/lsdisgame" target="_blank"><img src="img/fb.png" alt="Facebook"></a></li>
+                  <li><a href="https://vk.com/lsdgame" target="_blank"><img src="img/vk.png" alt="Vkontakte"></a></li>
                 </ul>
               </div>
             </div>
@@ -44,32 +50,30 @@
         </div>
       </div>
 
-
       <div class="tv">
         <div class="row">
-          <div class="offset-xl-1 col-xl-7">
-
-              <a href="" class="tv-link">
-                <img src="img/play.png" alt="" class="tv-play">
-                <p class="tv-desc text-xs-center text-uppercase">Вся суть бизнеса<br>за 2,5 минуты!</p>
+          <div class="col-xs-12 offset-xl-1 col-xl-7">
+            <div class="tv-wrap">
+              <a class="various fancybox.iframe tv-link" href="https://www.youtube.com/embed/RBm3gomjrkI">
+                <img src="img/tv.gif" alt="" class="tv-img" width="100%">
               </a>
-              <img src="img/tv.png" alt="" class="tv-img">
-              <img src="img/noise.gif" alt="" class="tv-noise">
-            
+            </div>
           </div>
-          <div class="col-xl-3">
-            <h2>Хочу в бизнес!</h2>
-            <form action="mail.php" method="POST" name="header-form" class="call-back">
-              <input type="text" class="form-control" name="name" placeholder="Имя">
-              <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
-              <p class="require-desc">* Поля обязательные к заполнению</p>
-              <span class="results"></span>
-              <button class="button-big" type="submit">Отправить</button>
-            </form>
-            <div class="success">
-              Спасибо, мы получили ваши <br>
-              данные, наш менеджер свяжется <br>
-              с вами в ближайшее время!
+          <div class="tv-form">
+            <div class="col-xs-12 col-xl-3">
+              <h2>Хочу в бизнес!</h2>
+              <form action="mail.php" method="POST" name="header-form" class="call-back">
+                <input type="text" class="form-control" name="name" placeholder="Имя">
+                <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*" required>
+                <p class="require-desc">* Поля обязательные к заполнению</p>
+                <span class="results"></span>
+                <button class="button-big" type="submit">Отправить</button>
+              </form>
+              <div class="success">
+                Спасибо, мы получили ваши <br>
+                данные, наш менеджер свяжется <br>
+                с вами в ближайшее время!
+              </div>
             </div>
           </div>
         </div>
@@ -108,17 +112,17 @@
         <div class="offset-xl-1 col-xl-7 bdr">
           <p class="strength-desc text-uppercase">Численность населения вашего города, чел</p>
             <div class="row">
-              <div class="col-xl-3">
+              <div class="col-xs-4 col-xl-3">
                 <p class="strength-val">до 500 000</p>
-                <span>|</span>
+                <p class="marker-left">|</p>
               </div>
-              <div class="col-xl-5 text-xs-center">
+              <div class="col-xs-4 col-xl-5 text-xs-center">
                 <p class="strength-val">от 500 000 до 999 000</p>
-                <span>|</span>
+                <p>|</p>
               </div>
-              <div class="col-xl-3 text-xs-right">
+              <div class="col-xs-4 col-xl-3 text-xs-right">
                 <p class="strength-val">свыше 1 000 000</p>
-                <span>|&nbsp;</span>
+                <p class="marker-right">|</p>
               </div>
             </div>
             
@@ -153,9 +157,9 @@
                 <input type="text" class="form-control" name="name" placeholder="Имя">
               </div>
               <div class="col-xl-4">
-                <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
+                <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*" required>
               </div>
-              <div class="col-xl-3">
+              <div class="col-xl-3 text-xs-center text-sm-left">
                 <button class="button-big" type="submit">Отправить</button>
               </div>
             </form>
@@ -177,15 +181,15 @@
       <div class="row">
         <div class="offset-xl-1 col-xl-5">
           <div class="row">
-            <div class="offset-xl-3 col-xl-9">
-              <h4>Мы создаем:</h4>
+            <div class="col-xs-12">
+              <h4 class="text-xs-center">Мы создаем:</h4>
             </div>
           </div>
           <div class="row adv-item">
-            <div class="col-xl-3">
+            <div class="col-xs-3 col-xl-3">
               <span class="icon scenario"></span>
             </div>
-            <div class="col-xl-9">
+            <div class="col-xs-9 col-xl-9">
               <p class="adv-desc">
                 Мы прорабатываем каждый сценарий <br>
                 с криминалистами, врачами, <br>
@@ -194,10 +198,10 @@
             </div>
           </div>
           <div class="row adv-item">
-            <div class="col-xl-3">
+            <div class="col-xs-3 col-xl-3">
               <span class="icon video"></span>
             </div>
-            <div class="col-xl-9">
+            <div class="col-xs-9 col-xl-9">
               <p class="adv-desc mt10">
                 Наши видео снимают <br>
                 настоящие профессионалы
@@ -205,10 +209,10 @@
             </div>
           </div>
           <div class="row adv-item">
-            <div class="col-xl-3">
+            <div class="col-xs-3 col-xl-3">
               <span class="icon audio"></span>
             </div>
-            <div class="col-xl-9">
+            <div class="col-xs-9 col-xl-9">
               <p class="adv-desc">
                 Аудиозаписи потрясают своей <br>
                 натуральностью, потому что записаны <br>
@@ -220,15 +224,15 @@
 
         <div class="offset-xl-1 col-xl-5">
           <div class="row">
-            <div class="offset-xl-3 col-xl-9">
-              <h4>Вы получаете:</h4>
+            <div class="col-xs-12">
+              <h4 class="text-xs-center">Вы получаете:</h4>
             </div>
           </div>
           <div class="row adv-item">
-            <div class="col-xl-3">
+            <div class="col-xs-3 col-xl-3">
               <span class="icon box"></span>
             </div>
-            <div class="col-xl-9">
+            <div class="col-xs-9 col-xl-9">
               <p class="adv-desc">
                 Бокс с 20 комплектами раздаточных <br>
                 материалов и необходимого реквизита <br>
@@ -237,20 +241,20 @@
             </div>
           </div>
           <div class="row adv-item">
-            <div class="col-xl-3">
+            <div class="col-xs-3 col-xl-3">
               <span class="icon video-crime"></span>
             </div>
-            <div class="col-xl-9">
+            <div class="col-xs-9 col-xl-9">
               <p class="adv-desc mt20">
                 Видеоролики с места преступления
               </p>
             </div>
           </div>
           <div class="row adv-item">
-            <div class="col-xl-3">
+            <div class="col-xs-3 col-xl-3">
               <span class="icon audio-crime"></span>
             </div>
-            <div class="col-xl-9">
+            <div class="col-xs-9 col-xl-9">
               <p class="adv-desc mt10">
                 Аудиозаписи допросов и звуковое <br>
                 сопровождение к играм
@@ -263,10 +267,10 @@
       <div class="row">
         <div class="offset-xl-1 col-xl-5">
           <div class="row adv-item">
-            <div class="col-xl-3">
+            <div class="col-xs-3 col-xl-3">
               <span class="icon docs"></span>
             </div>
-            <div class="col-xl-9">
+            <div class="col-xs-9 col-xl-9">
               <p class="adv-desc-support">
                 Пакет документов с инструкциями <br>
                 по запуску и ведению бизнеса
@@ -277,10 +281,10 @@
 
         <div class="offset-xl-1 col-xl-5">
           <div class="row adv-item">
-            <div class="col-xl-3">
+            <div class="col-xs-3 col-xl-3">
               <span class="icon support"></span>
             </div>
-            <div class="col-xl-9">
+            <div class="col-xs-9 col-xl-9">
               <p class="adv-desc-support">
                 Поддержку и консультации <br>
                 на всех этапах ведения бизнеса
@@ -293,35 +297,35 @@
   </section>
 
   <section id="team">
-    <h2 class="text-uppercase text-xs-center">Команда</h2>
+    <h2 class="text-uppercase text-xs-center">Создатели</h2>
 
     <div class="container">
-      <div class="row">
-        <div class="offset-md-1 col-md-5">
+      <div class="row text-xs-center text-md-left">
+        <div class="col-xs-6 offset-md-1 col-md-5">
           <div class="team-item">
             <div class="row">
               <div class="offset-md-1 col-md-4">
-                <img src="img/team/belousov.png" alt="Денис Белоусов" class="team-item-avatar">
+                <img src="img/team/belousov.png" alt="Денис Белоусов" class="team-item-avatar" width="100%">
               </div>
               <div class="col-md-7">
                 <div class="team-item-desc">
                   <p class="team-item-name">Денис Белоусов</p>
-                  <p class="team-item-post">создатель проекта ЛСД,<br>руководитель</p>
+                  <p class="team-item-post text-xs-center text-md-left">создатель проекта ЛСД,<br>руководитель</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-5">
+        <div class="col-xs-6 col-xl-5">
           <div class="team-item">
             <div class="row">
               <div class="col-md-4">
-                <img src="img/team/ahmetshin.png" alt="Антон Ахметшин" class="team-item-avatar">
+                <img src="img/team/ahmetshin.png" alt="Антон Ахметшин" class="team-item-avatar" width="100%">
               </div>
               <div class="col-md-8">
                 <div class="team-item-desc">
                   <p class="team-item-name">Антон Ахметшин</p>
-                  <p class="team-item-post">совладелец проекта ЛСД,<br>игротехник</p>
+                  <p class="team-item-post text-xs-center text-md-left">совладелец проекта ЛСД,<br>игротехник</p>
                 </div>
               </div>
             </div>
@@ -333,7 +337,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="offset-xs-1 col-xl-10">
+        <div class="col-xs-12 text-xs-center offset-xl-1 col-xl-10">
           <ul class="stages">
             <li>
               <span class="stages-icon invite"></span>
@@ -382,9 +386,9 @@
               <input type="text" class="form-control" name="name" placeholder="Имя">
             </div>
             <div class="col-xl-4">
-              <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
+              <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*" required>
             </div>
-            <div class="col-xl-3">
+            <div class="col-xl-3 text-xs-center text-sm-left">
               <button class="button-big" type="submit">Отправить</button>
             </div>
           </form>
@@ -404,15 +408,15 @@
     <div class="question-wrap">
       <div class="container">
         <div class="row">
-          <div class="offset-xl-1 col-xl-4">
+          <div class="offset-xs-1 col-xs-11 offset-md-1 col-md-4">
             <ul>
               <li>Дорого?</li>
               <li>Это будет работать у меня в городе?</li>
-              <li>Чем мне заняться пока я собира<br>средства для покупки франшизы?</li>
+              <li>Чем мне заняться пока я собираю<br>средства для покупки франшизы?</li>
               <li>Кто ваши конкуренты?</li>
             </ul>
           </div>
-          <div class="col-xl-5">
+          <div class="offset-xs-1 col-xs-11 col-md-5">
             <ul>
               <li>Почему ЛСД, а не квест комнаты<br>или другие интеллектуальные игры?</li>
               <li>У меня не получится!</li>
@@ -422,38 +426,49 @@
         </div>
       </div>
     </div> 
-    <div class="text-xs-center"><a href="" class="button-big">Получить ответы</a></div>
+    <div class="text-xs-center"><a href="" class="button-big" data-toggle="modal" data-target=".call-back-modal">Получить ответы</a></div>
 
     <div class="container">
       <div class="row">
         <div class="offset-xl-1 col-xl-10">
           <h4>Бизнес уже работает. Вот наши партнеры</h4>
-          <div class="partners-wrap">
-            <div class="col-xl-3">
-              <img src="img/speech-bubble-02.png" alt="">
-              <p class="name">Наташа Беляева</p>
-              <em>ЛСД — это круто! И да, это ИГРА!!! Спасибо, Денис Белоусов!! Отличная идея. Меня очень порадовало это</em>
-              <a href="" class="button-small">Связаться с партнером</a>
-            </div>
-            <div class="col-xl-3">
-              <img src="img/speech-bubble-01.png" alt="">
-              <p class="name">Динара Иванова</p>
-              <em>Погрузились в детективные расследования с головой! Мы с коллегами такую теорию выдвинули, что мама не горюй </em>
-              <a href="" class="button-small">Связаться с партнером</a>
-            </div>
-            <div class="col-xl-3">
-              <img src="img/speech-bubble-02.png" alt="">
-              <p class="name">Вера Русских</p>
-              <em>А вы слышите скрип мозгов? Проведи 2 часа с #ЛСДэтоигра и получи +150 к Интеллекту. И +3 к квадратной попе)))</em>
-              <a href="" class="button-small">Связаться с партнером</a>
-            </div>
-            <div class="col-xl-3">
-              <img src="img/speech-bubble-01.png" alt="">
-              <p class="name">Наташа Беляева</p>
-              <em>ЛСД — это круто! И да, это ИГРА!!! Спасибо, Денис Белоусов!! Отличная идея. Меня очень порадовало</em>
-              <a href="" class="button-small">Связаться с партнером</a>
+          <div class="row">
+            <div class="partners-wrap">
+              <div class="partner-item col-xs-12 col-sm-6 col-md-4 offset-xl-0 col-xl-2">
+                <span class="speech-bubble 01"></span>
+                <p class="name">Анна Петрова<br><i>г. Самара</i></p>
+                <em>Привлек формат игры, который не является ни квестом, 
+                ни привычной квиз — игрой. Во-вторых, меня поразил антураж игры и стиль, который продуман до мелочей. Участник полностью погружается
+                в детективный мир, забывая, что творится за окном.</em>
+                <a href="" class="button-small" data-toggle="modal" data-target=".call-back-city-modal">Связаться с партнером</a>
+              </div>
+              <div class="partner-item col-xs-12 col-sm-6 col-md-4 offset-xl-0 col-xl-2">
+                <span class="speech-bubble second"></span>
+                <p class="name">Алексей Фомин<br><i>г. Екатеринбург</i></p>
+                <em>Адекватный взнос, низкий роялти, поддержка на всех этапах — основные критерии, которые я оценивал при выборе франшизы. ЛСД подошёл по всем параметрам и подарил много приятных бонусов. Именно поэтому сейчас Я — дилер ЛСД в Екатеринбурге!)</em>
+                <a href="" class="button-small" data-toggle="modal" data-target=".call-back-city-modal">Связаться с партнером</a>
+              </div>
+              <div class="partner-item col-xs-12 col-sm-6 col-md-4 offset-xl-0 col-xl-2">
+                <span class="speech-bubble third"></span>
+                <p class="name">Дмитрий Хорчин<br><i>г. Калуга</i></p>
+                <em>Каждый человек хотел бы почувствовать себя в роли Шерлока Холмса, раскрывая преступления своим знаменитым дедуктивным методом. ЛСД сделает из Вас детектива! Формат привлекает людей и позволяет заработать, проводя игры ЛСД в своём городе</em>
+                <a href="" class="button-small" data-toggle="modal" data-target=".call-back-city-modal">Связаться с партнером</a>
+              </div>
+              <div class="partner-item col-xs-12 col-sm-6 offset-md-2 col-md-4 offset-xl-0 col-xl-2">
+                <span class="speech-bubble fourth"></span>
+                <p class="name">Василий Ефимов<br><i>г. Тюмень</i></p>
+                <em>Я выбрал ЛСД по следующим причинам — оригинальность, уникальность проекта; стиль, глубина проработки материалов; потенциал развития проекта в России; потенциал моего заработка; близость к моей деятельности; открытость и помощь создателей</em>
+                <a href="" class="button-small" data-toggle="modal" data-target=".call-back-city-modal">Связаться с партнером</a>
+              </div>
+              <div class="partner-item col-xs-12 offset-sm-3 col-sm-6 offset-md-0 col-md-4 offset-xl-0 col-xl-2">
+                <span class="speech-bubble fifth"></span>
+                <p class="name">Алексей Захаренко<br><i>г. Орел</i></p>
+                <em>Выбрал ЛСД, потому что искал интересный проект, который не будет отнимать много времени, но при этом приносить доход. Тема с ресторанными развлечениями сейчас находится на подъеме. Старался успеть попасть в струю. Результаты очень радуют!</em>
+                <a href="" class="button-small" data-toggle="modal" data-target=".call-back-city-modal">Связаться с партнером</a>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -469,12 +484,12 @@
         <div class="col-xl-8">
           <form action="mail.php" method="POST" name="payment-form" class="call-back">
             <div class="col-xl-4">
-              <input type="text" class="form-control" name="name" placeholder="Город*">
+              <input type="text" class="form-control" name="name" placeholder="Город">
             </div>
             <div class="col-xl-4">
-              <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*">
+              <input type="tel" class="form-control" name="phone" placeholder="Ваш номер телефона*" required>
             </div>
-            <div class="col-xl-3">
+            <div class="col-xl-3 text-xs-center text-sm-left">
               <button class="button-big" type="submit">Отправить</button>
             </div>
           </form>
@@ -503,67 +518,100 @@
       <!-- Tab panes -->
       <div class="tab-content">
         <div class="tab-pane active" id="photo" role="tabpanel">
-          <div class="gallery-photo">
-            <div><img data-lazy="img/photo/photo-1.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-2.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-3.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-4.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-5.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-6.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-7.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-8.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-9.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-10.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-11.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-12.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-13.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-14.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-15.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-16.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-17.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-18.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-19.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-20.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-21.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-22.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-23.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-24.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-25.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-26.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-27.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-28.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-29.jpg" alt=""></div>
-            <div><img data-lazy="img/photo/photo-30.jpg" alt=""></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="gallery-photo">
+                  <a href="img/photo/photo-1.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-1.jpg" alt=""></a>
+                  <a href="img/photo/photo-2.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-2.jpg" alt=""></a>
+                  <a href="img/photo/photo-3.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-3.jpg" alt=""></a>
+                  <a href="img/photo/photo-4.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-4.jpg" alt=""></a>
+                  <a href="img/photo/photo-5.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-5.jpg" alt=""></a>
+                  <a href="img/photo/photo-6.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-6.jpg" alt=""></a>
+                  <a href="img/photo/photo-7.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-7.jpg" alt=""></a>
+                  <a href="img/photo/photo-8.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-8.jpg" alt=""></a>
+                  <a href="img/photo/photo-9.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-9.jpg" alt=""></a>
+                  <a href="img/photo/photo-10.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-10.jpg" alt=""></a>
+                  <a href="img/photo/photo-11.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-11.jpg" alt=""></a>
+                  <a href="img/photo/photo-12.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-12.jpg" alt=""></a>
+                  <a href="img/photo/photo-13.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-13.jpg" alt=""></a>
+                  <a href="img/photo/photo-14.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-14.jpg" alt=""></a>
+                  <a href="img/photo/photo-15.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-15.jpg" alt=""></a>
+                  <a href="img/photo/photo-16.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-16.jpg" alt=""></a>
+                  <a href="img/photo/photo-17.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-17.jpg" alt=""></a>
+                  <a href="img/photo/photo-18.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-18.jpg" alt=""></a>
+                  <a href="img/photo/photo-19.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-19.jpg" alt=""></a>
+                  <a href="img/photo/photo-20.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-20.jpg" alt=""></a>
+                  <a href="img/photo/photo-21.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-21.jpg" alt=""></a>
+                  <a href="img/photo/photo-22.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-22.jpg" alt=""></a>
+                  <a href="img/photo/photo-23.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-23.jpg" alt=""></a>
+                  <a href="img/photo/photo-24.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-24.jpg" alt=""></a>
+                  <a href="img/photo/photo-25.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-25.jpg" alt=""></a>
+                  <a href="img/photo/photo-26.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-26.jpg" alt=""></a>
+                  <a href="img/photo/photo-27.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-27.jpg" alt=""></a>
+                  <a href="img/photo/photo-28.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-28.jpg" alt=""></a>
+                  <a href="img/photo/photo-29.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-29.jpg" alt=""></a>
+                  <a href="img/photo/photo-30.jpg" class="fancybox" data-fancybox-group="photo-gallery"><img data-lazy="img/photo/thumb-photo-30.jpg" alt=""></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="tab-pane" id="video" role="tabpanel">
-          <a href="" data-toggle="modal" data-target=".video-modal-1"><img src="img/video/screenshot_video-1.jpg" alt=""></a><a href="" data-toggle="modal" data-target=".video-modal-2"><img src="img/video/screenshot_video-2.jpg" alt=""></a><a href="" data-toggle="modal" data-target=".video-modal-3"><img src="img/video/screenshot_video-3.jpg" alt=""></a><a href="" data-toggle="modal" data-target=".video-modal-4"><img src="img/video/screenshot_video-4.jpg" alt=""></a>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-md-6 col-xl-3">
+                <a class="various fancybox.iframe" href="https://www.youtube.com/embed/mT8KBL5qvx8">
+                  <img src="img/video/screenshot_video-1.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-xs-12 col-md-6 col-xl-3">
+                <a class="various fancybox.iframe" href="https://www.youtube.com/embed/w3RtCEqzVsA">
+                  <img src="img/video/screenshot_video-2.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-xs-12 col-md-6 col-xl-3">
+                <a class="various fancybox.iframe" href="https://www.youtube.com/embed/rEh-dQm19Zk">
+                  <img src="img/video/screenshot_video-3.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-xs-12 col-md-6 col-xl-3">
+                <a class="various fancybox.iframe" href="https://www.youtube.com/embed/XFUo8anTK3A">
+                  <img src="img/video/screenshot_video-4.jpg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
   </section>
   <footer>
     <div class="container">
       <div class="row">
-        <div class="offset-xl-1 col-xl-2">
+        <div class="offset-xs-3 col-xs-6 offset-xl-1 col-xl-2">
           <img src="img/logo-footer.jpg" class="logo">
         </div>
-        <div class="col-xl-5">
+        <div class="col-xs-12 col-xl-5">
           <ul id="menu-bottom" class="nav">
             <li class="nav-item"><a href="#menu-top" class="nav-link">Главная</a></li>
             <li class="nav-item"><a href="#results" class="nav-link">Результаты</a></li>
             <li class="nav-item"><a href="#cooperation" class="nav-link">Сотрудничество</a></li>
             <li class="nav-item"><a href="#proofs" class="nav-link">Отзывы</a></li>
           </ul>
+          <div class="main-print text-xs-center">
+            <a href="http://mainprinter.ru/" title="Mainprint" target="_blank"><img src="img/main-print.png"></a>
+          </div>
         </div>
-        <div class="col-xl-4">
+        <div class="col-xs-12 col-xl-4">
           <div class="contacts">
-            <a href="tel:+79090606897" class="phone">+7 (909) 060-68-97</a><br>
+            <a href="tel:88007005162" class="phone">8-800-700-51-62</a><br>
             <a href="" class="call-back" data-toggle="modal" data-target=".call-back-modal">Заказать звонок</a>
             <div class="social">
               <ul>
-                <li><a href="https://vk.com/lsdgame" target="_blank"><img src="img/fb.png" alt="Facebook"></a></li>
-                <li><a href="https://www.facebook.com/lsdisgame" target="_blank"><img src="img/vk.png" alt="Vkontakte"></a></li>
+                <li><a href="https://www.facebook.com/lsdisgame" target="_blank"><img src="img/fb.png" alt="Facebook"></a></li>
+                <li><a href="https://vk.com/lsdgame" target="_blank"><img src="img/vk.png" alt="Vkontakte"></a></li>
               </ul>
             </div>
           </div>
@@ -571,16 +619,46 @@
       </div>
     </div>
   </footer>
+  <a href="#body" class="totop">&uarr;</a>
 
   <!-- Модальное окно для формы заказа звонка -->
-  <div class="modal fade call-back-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal fade call-back-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="cbm">
     <div class="modal-dialog modal-sm" role="document">
       <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="mail.php" method="POST" name="call-back" class="call-back">
+          <input class="form-control" type="text" placeholder="Введите имя" name="name">
+          <input class="form-control" type="tel" placeholder="Номер телефона" name="phone" required="required">
+          <button type="submit" class="button-big">Отправить</button>
+        </form>
+        <div class="success">
+          Спасибо, мы получили ваши <br>
+          данные, наш менеджер свяжется <br>
+          с вами в ближайшее время!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно для связи с партнером -->
+  <div class="modal fade call-back-city-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Для того, чтобы партнер связался в Вами, введите</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
         <div class="row">
-          <div class="col-xl-12">
+          <div class="col-xs-12 col-xl-12">
             <form action="mail.php" method="POST" name="call-back" class="call-back">
-              <input class="form-control" type="text" placeholder="Введите имя" name="name">
-              <input class="form-control" type="tel" placeholder="Номер телефона" name="phone">
+              <input class="form-control" type="text" placeholder="Имя" name="name">
+              <input class="form-control" type="tel" placeholder="Номер телефона*" name="phone" required="required">
               <button type="submit" class="button-big">Отправить</button>
             </form>
             <div class="success">
@@ -594,50 +672,13 @@
     </div>
   </div>
 
-  <!--Модальные окна для видео -->
-  <div class="modal fade video-modal-1" tabindex="-1" aria-labelledby="mySmallModalLabel">
-    <div class="modal-dialog modal-" role="document">
-      <div class="row">
-        <div class="col-xl-12">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/XFUo8anTK3A" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade video-modal-2" tabindex="-1" aria-labelledby="mySmallModalLabel">
-    <div class="modal-dialog modal-" role="document">
-      <div class="row">
-        <div class="col-xl-12">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/rEh-dQm19Zk" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade video-modal-3" tabindex="-1" aria-labelledby="mySmallModalLabel">
-    <div class="modal-dialog modal-" role="document">
-      <div class="row">
-        <div class="col-xl-12">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/w3RtCEqzVsA" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade video-modal-4" tabindex="-1" aria-labelledby="mySmallModalLabel">
-    <div class="modal-dialog modal-" role="document">
-      <div class="row">
-        <div class="col-xl-12">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/mT8KBL5qvx8" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://yastatic.net/jquery/3.1.1/jquery.min.js"></script>
-  <script src="js/jquery.maskedinput.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-  <script src="js/ion.rangeSlider.min.js"></script>
-  <script src="js/script.js"></script>
+  
+  <script src="minified/polyfiller.js"></script>
+
+  <script src="script.js"></script>
+    <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40748314 = new Ya.Metrika({ id:40748314, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/40748314" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 </body>
 </html>

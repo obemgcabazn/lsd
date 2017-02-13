@@ -36,6 +36,31 @@
 
   &-small 
     @extend .button
+    padding: 5px 10px
+    text-shadow: none
+    font-size: 10px
 
-.call-back-modal
+.modal-header
+  border-bottom: none
+
+.call-back-modal, .call-back-city-modal
   text-align: center
+  
+  .call-back
+      padding: 0 20px 30px 20px
+
+      input + input
+          margin: 30px 0
+
+  .success
+      padding: 30px 0
+
+  .modal-title
+    float: left;
+    width: calc(100% - 24px);
+
+  .modal-header
+    padding: 5px
+
+.call-back-city-modal .modal-header
+  padding: 15px
